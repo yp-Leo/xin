@@ -19,4 +19,4 @@ def main(number,string):
 
 
 if __name__ == '__main__':
-	main(20,'不知道你在说什么呢')
+	main(20,'a yige  mei li de nvhai ')
