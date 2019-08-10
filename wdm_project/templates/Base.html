@@ -1,0 +1,375 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://www.wdmcake.cn/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+{% block header %}
+    <script charset="utf-8" src="{% static 'js/lxb.js' %}"></script><script charset="utf-8" src="{% static 'js/lxb.js' %}"></script><script async="" charset="utf-8" src="{% static 'js/udeskApi.js' %}"></script><script src="{% static 'js/hm.js' %}"></script><script src="{% static 'js/hm.js' %}"></script><script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".top-maskItem").mouseover(function(){
+                $(this).addClass("qq").parent().parent().addClass("hover");
+            }).mouseout(function(){
+                $(this).removeClass("qq").parent().parent().removeClass("hover");
+            }).click(function(){
+               $(this).find("a").click();
+            });
+        })
+        $(function(){
+            $(".bottom-maskItem").mouseover(function(){
+                $(this).addClass("qq").parent().parent().addClass("hover");
+            }).mouseout(function(){
+                $(this).removeClass("qq").parent().parent().removeClass("hover");
+            });
+        })
+    </script>
+
+    <meta name="Keywords" content="味多美官网,味多美蛋糕,味多美蛋糕订购,味多美蛋糕预订,味多美法式蛋糕,味多美提货卡">
+    <meta name="Description" content="味多美,选用全球优质原料,全国300多家直营店，提供天然奶油蛋糕、法式蛋糕、慕斯蛋糕、乳酪蛋糕、庆典蛋糕及提货卡的在线订购服务。订购热线:4001-170-170">
+    <title>味多美官网_蛋糕订购，100%使用天然奶油</title>
+    <link rel="shortcut icon" href="http://www.wdmcake.cn/favicon.ico">
+    <link rel="icon" href="http://www.wdmcake.cn/animated_favicon.gif" type="image/gif">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/jquery.alerts.css' %}" rel="stylesheet" type="text/css">
+    <link rel="alternate" type="application/rss+xml" title="RSS|味多美官网_蛋糕订购，100%使用天然奶油" href="http://www.wdmcake.cn/feed.xml">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?af0f084a32588a70ec36eb5bf125f669";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    var city_id ='1';
+    </script><link href="{% static 'css/slider.css' %}" rel="stylesheet" type="text/css">
+    <title>无标题文档</title>
+
+
+    {% block gundong %}
+    {#    ====== 类属性:滚动字幕 ======#}
+    <style>
+    .marquee {
+                    width: 1170px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    box-sizing: border-box;
+                    animation: marquee 30s linear infinite;
+
+                }
+
+                .marquee:hover {
+                    animation-play-state: paused
+                }
+                /* Make it move */
+
+                @keyframes marquee {
+                    0% {
+                        text-indent: 27.5em
+                    }
+                    100% {
+                        text-indent: -105em
+                    }
+                }
+                /* Make it pretty */
+
+                .microsoft {
+                    padding-left: 1.5em;
+                    position: relative;
+                    font: 14px 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+                    color: rgb(102, 102, 102);
+                    background: rgb(255, 248, 233) none repeat scroll 0% 0%;
+                    margin-top: 10px;
+                    height: 26px;
+                    line-height: 26px;
+                }
+                /* ::before was :before before ::before was ::before - kthx */
+
+                .microsoft:before,
+                .microsoft::before {
+                    z-index: 2;
+                    content: '';
+                    position: absolute;
+                    top: -1em;
+                    left: -1em;
+                    width: .5em;
+                    height: .5em;
+                    /*box-shadow: 1.0em 1.25em 0 #F65314, 1.6em 1.25em 0 #7CBB00, 1.0em 1.85em 0 #00A1F1, 1.6em 1.85em 0 #FFBB00;*/
+                    /*background: url(img/horn.png);*/
+
+                }
+
+                .microsoft:after,
+                .microsoft::after {
+                    z-index: 1;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 1.4em;
+                    height: 2em;
+                    background: #FFF8E9 url(themes/wdm/images/horn.png)no-repeat center;
+                    background-size:18px 18px ;
+
+                }
+    </style>
+    {% endblock gundong %}
+
+    <script src="{% static 'images/out_config' %}"></script><link type="text/css" rel="stylesheet" href="{% static 'css/emotion.css' %}"><style type="text/css">#udesk_pop_dialog .emoji { background-image: url("https://wdmcake.udesk.cn/im_client/images/im-emoji-big-1.png")}</style><script src="{% static 'free' %}"></script></head>
+{% endblock header %}
+
+{# ============================= 主体：body =============================#}
+<body>
+{# ************** 头:挖坑 ****************** #}
+{% block Head %}
+<script src="{% static 'js/bl.js' %}" crossorigin=""></script>
+<script>
+!(function(c,b,d,a){c[a]||(c[a]={});c[a].config={pid:"ini7n@071b2c60d5d21b6",imgUrl:"https://arms-retcode.aliyuncs.com/r.png?"};
+with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
+})(window,document,"https://retcode.alicdn.com/retcode/bl.js","__bl");
+</script>
+<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.json-2.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.alerts.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+<script type="text/javascript">
+var pc_style = '';
+var browser = {
+  versions: function () {
+	var u = navigator.userAgent, app = navigator.appVersion;
+	return {
+	  trident: u.indexOf('Trident') > -1,
+	  presto: u.indexOf('Presto') > -1,
+	  webKit: u.indexOf('AppleWebKit') > -1,
+	  gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+	  mobile: !!u.match(/AppleWebKit.*Mobile.*/) ,
+	  ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+	  android: u.indexOf('Android') > -1 && u.indexOf('Linux') > -1,
+	  iPhone: u.indexOf('iPhone') > -1 && u.indexOf('Mac') > -1,
+	  iPad: u.indexOf('iPad') > -1,
+	  webApp: u.indexOf('Safari') == -1,
+	  ua: u
+	};
+  }(),
+  language: (navigator.browserLanguage || navigator.language).toLowerCase()
+}
+if ((browser.versions.mobile || browser.versions.iPhone  || browser.versions.android) && !browser.versions.iPad) {
+  this.location = 'http://m.wdmcake.cn/';
+}
+
+</script>
+<div class="top_wai">
+<div class="top">
+    <div class="logo"><a href="http://www.wdmcake.cn/" name="top" id="top"><img src="{% static 'images/logo_bj.png' %}"></a></div>
+    <div class="seat" id="city_sel_div">
+   <div>北京</div>
+
+    <div class="area" style="display:none;">
+            <div>北京</div>
+                    <div><a href="javascript:;" rel="http://www.wdmcake.cn/city.php?city_id=2">上海</a></div>
+             </div>
+
+</div>
+<script type="text/javascript" language="javascript">
+$("#city_sel_div").hover(function(){
+                    $("#city_sel_div .area").show();
+                },function(){
+                    $("#city_sel_div .area").hide();
+                });
+$("#city_sel_div a").click(function(){
+	var city_url = $(this).attr("rel");
+	jConfirm("切换城市您的购物车将被清空!","",function(result){
+		if(result) location.href=city_url;
+	});
+});
+</script>
+    <div class="navigation">
+        <ul>
+                        <li>
+            	<a href="http://www.wdmcake.cn/">首页</a>
+            </li>
+        	            <li class="navlicake">
+            	<a href="http://www.wdmcake.cn/category-1.html">蛋糕</a>
+            </li>
+        	            <li>
+            	<a href="http://www.wdmcake.cn/category-11.html">电子卡券</a>
+            </li>
+        	            <li>
+            	<a href="http://www.wdmcake.cn/category-10.html" style="color:red; font-weight:bold;">法式月饼</a>
+            </li>
+        	            <li>
+            	<a href="http://www.wdmcake.cn/category-30.html" target="_blank">全国邮寄</a>
+            </li>
+        	            <li>
+            	<a href="http://www.wdmcake.cn/article.php?id=103" target="_blank">同城配送范围</a>
+            </li>
+        	            <li>
+            	<a href="http://www.wdmcake.cn/user.php">会员中心</a>
+            </li>
+        	            <li>
+            	<a href="https://m.bigaka.com/jfmall/toJFMallPage.do?storeid=18736" target="_blank">积分换礼</a>
+            </li>
+        	            <li class="li2">
+            	<a href="http://www.wdmcake.cn/about.php?id=53">企业服务</a>
+            </li>
+        	        </ul>
+    </div>
+    <div class="top_right">
+        <span>订购热线   110/119/120</span>
+        <div class="login">
+    <ul>
+        <li class="li1"><a href="http://www.wdmcake.cn/user.php?act=register">注册</a></li>
+        <li><a href="http://www.wdmcake.cn/user.php?act=login">登录</a></li>
+    </ul>
+    <div class="link">
+        <ul>
+            <li class="cart"><a href="http://www.wdmcake.cn/flow.php">&nbsp;</a></li>
+            <li class="li2 red"><a href="http://www.wdmcake.cn/flow.php">0</a></li>
+            <li class="help"><a href="http://www.wdmcake.cn/help.php">&nbsp;</a></li>
+            <!--<li class="qq"><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAyNTc3M18xNjIxOTZfNDAwMTE3MDE3MF8yXw" target="_blank">&nbsp;</a></li>--->
+        </ul>
+    </div>
+</div>
+        </div>
+	</div>
+</div>
+<div id="top_below"></div>
+{% endblock Head %}
+
+
+{% block content %}
+{#    主体#}
+{% endblock content %}
+
+
+{# ************** 尾部:挖坑 ****************** #}
+{% block bottom %}
+{# ============================= bottom_wai的style ============================= #}
+<style>
+	.bottom_wai .bottom_t{
+		height: 247px !important;
+	}
+	.bottom_wai .bottom_t .serve{
+		border-bottom: none !important;
+	}
+</style>
+{# ============================= 页  尾: bottom_wai ============================= #}
+<div class="bottom_wai">
+<div class="bottom_t">
+    <div class="serve">
+        <ul class="ul_w">
+                    <li class="li_w">
+                <ul>
+                    <li class="li1"><a href="http://www.wdmcake.cn/help.php?cat_id=7" title="帮助中心" target="_blank">帮助中心</a></li>
+                                        <li><a href="http://www.wdmcake.cn/help.php?id=9" title="购物帮助" target="_blank">购物帮助</a></li>
+                                        <li><a href="http://www.wdmcake.cn/help.php?id=10" title="支付方式" target="_blank">支付方式</a></li>
+                                        <li><a href="http://www.wdmcake.cn/ps.htm" title="配送规则" target="_blank">配送规则</a></li>
+                                        <li><a href="http://www.wdmcake.cn/help.php?id=104" title="法式月饼提货门店" target="_blank">法式月饼提货门店</a></li>
+                                    </ul>
+            </li>
+                    <li class="li_w">
+                <ul>
+                    <li class="li1"><a href="http://www.wdmcake.cn/help.php?cat_id=8" title="门店服务" target="_blank">门店服务</a></li>
+                                        <li><a href="http://www.wdmcake.cn/storelist.php" title="门店查询" target="_blank">门店查询</a></li>
+                                        <li><a href="http://www.wdmcake.com/quanka.php?id=51" title="购卡须知" target="_blank">购卡须知</a></li>
+                                        <li><a href="http://www.wdmcake.cn/chuzhi/chuzhi.html" title="提货卡/积分卡查询" target="_blank">提货卡/积分卡查询</a></li>
+                                    </ul>
+            </li>
+                    <li class="li_w">
+                <ul>
+                    <li class="li1"><a href="http://www.wdmcake.cn/help.php?cat_id=11" title="关于我们" target="_blank">关于我们</a></li>
+                                        <li><a href="http://www.wdmcake.cn/about.php" title="了解味多美" target="_blank">了解味多美</a></li>
+                                        <li><a href="http://www.wdmcake.cn/article_cat.php?id=14" title="味多美新闻" target="_blank">味多美新闻</a></li>
+                                        <li><a href="http://www.wdmcake.cn/join.php" title="加入味多美" target="_blank">加入味多美</a></li>
+                                    </ul>
+            </li>
+                    <li class="li_w">
+                <ul>
+                    <li class="li1"><a href="http://www.wdmcake.cn/help.php?cat_id=10" title="关注我们" target="_blank">关注我们</a></li>
+                                        <li><a href="http://weibo.com/wedomecake" title="官方微博" target="_blank">官方微博</a></li>
+                                        <li><a href="https://weiduomei.qmei.me/local" title="美粉社区" target="_blank">美粉社区</a></li>
+                                    </ul>
+            </li>
+
+        </ul>
+        <div class="weixin"><img src="{% static 'images/wx_01.jpg' %}"><span>关注味多美微信<br>了解最新会员活动<span></span></span></div>
+        <div style="width: 1170px;margin: 0 auto;font-size: 12px;clear: both;text-align: center;">
+味多美面包坊，选用全球优质原料，22年来，北京开店近300家。天然奶油蛋糕，使用进口天然稀奶油。五环内3小时免费送达，可门店自提, 味多美分享蛋糕低至59折
+。
+</div>
+
+
+    </div>
+</div>
+<div class="bottom_b">
+
+    <div class="copyright">
+        <ul>
+
+        </ul>
+
+        <div class="copyright_b clear" style="float:left;">
+        	@2005-2018味多美版权所有，并保留所有权利。ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备14006433号</a>
+        			 	<div style="width:300px;margin:0 auto; padding:10px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202007671" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="{% static 'images/ghs.png' %}" style="float:left;width:16px;margin-top: 2px;margin-left: 0;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010202007671号</p></a>
+		 	</div>
+
+			            &nbsp;<span><div style="display:none;">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255734072'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1255734072%26l%3D2' type='text/javascript'%3E%3C/script%3E"));
+</script><span id="cnzz_stat_icon_1255734072"><a href="https://quanjing.cnzz.com/" target="_blank" title="全景统计"><img border="0" hspace="0" vspace="0" src="{% static 'images/2.gif' %}"></a></span><script src="{% static 'q_stat.php' %}" type="text/javascript"></script><script src="{% static 'core.php' %}" charset="utf-8" type="text/javascript"></script>
+</div></span>
+
+        </div>
+		<div style="margin-left:789px;width:383px;height:56px;">
+            <a id="___szfw_logo1___" href="https://credit.szfw.org/CX20170731001571100957.html" target="_blank"><img src="{% static 'images/silver.jpg' %}" border="0" style="width:90px;height:34px;margin-left:5px;"></a>
+			<a key="54925eb63b05a3da0fbc98ff" logo_size="83x30" logo_type="realname" href="https://v.pinpaibao.com.cn/authenticate/cert/?site=www.wdmcake.cn&amp;at=realname" target="_blank"><script src="{% static 'js/aq_auth.js' %}"></script><b id="aqLogoOPGPC" style="display: none;"></b><img src="{% static 'images/sm_83x30.png' %}" alt="安全联盟认证" width="83" height="30" style="border: none;"></a>
+            <a id="___szfw_logo___" href="https://credit.szfw.org/CX20120921001713001763.html" target="_blank"><img src="{% static 'images/sf.png' %}" border="0" style="width:90px;height:34px;margin-left:5px;"></a>
+			<a id="_pingansec_bottomimagelarge_shiming" target="_blank" href="http://si.trustutn.org/info?sn=741170707029409495880&amp;certType=1"><img src="{% static 'images/hysf.jpg' %}" style="width:90px;height:34px;margin-left:5px;"></a>
+        </div>
+	</div>
+
+</div>
+</div>
+
+<script type="text/javascript">(function(){document.getElementById('___szfw_logo___').oncontextmenu = function(){return false;}})();</script>
+<script type="text/javascript">(function(){document.getElementById('___szfw_logo1___').oncontextmenu = function(){return false;}})();</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?af0f084a32588a70ec36eb5bf125f669";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+(function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.charset="utf-8";g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","https://assets-cli.udesk.cn/im_client/js/udeskApi.js","ud");
+ud({
+    "code": "2cceh92g",
+    "link": "https://wdmcake.udesk.cn/im_client/?web_plugin_id=49448",
+    "color":"#E4004F",
+    "pos_flag":"crm"
+});
+</script>
+{% endblock bottom %}
+
+{# ============================= 尾部下面的留白，暂时没用 ============================= #}
+<div id="udesk_container">
+    <div id="udesk_btn">
+        <a style="display: block; position: fixed; box-sizing: border-box; font-size: 13px; color: rgb(255, 255, 255); text-align: center; cursor: pointer; text-decoration: none; z-index: 1000000000; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgba(0, 0, 0, 0.1); border-right-color: rgba(0, 0, 0, 0.1); border-left-color: rgba(0, 0, 0, 0.1); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; background-color: rgb(228, 0, 79); width: 40px; height: 40px; border-radius: 20px; right: 0px; top: 432px; margin: 18px;">
+            <span style="display:block;float:left;width:24px;height:24px;margin:7px 7px 0;"><img src="{% static 'images/msg@48x48.png' %}" style="width:100%;height:100%;"></span>
+            <span style="display:block;float:left;width:1px;height:100%;background-color:rgba(0, 0, 0, .08);vertical-align:middle;background-color:#000\9;filter:alpha(opacity=10)\9;display:none;"></span>
+            <span id="udesk_btn_text" style="display:block;float:left;height:40px;margin:0 10px;line-height:40px;overflow-y:hidden; font-size: 13px; color: #fff;display:none;">联系客服，在线咨询</span>
+            <span id="udesk_btn_circle" style="display:none;position:absolute;top:-13px;right:-13px;width:26px;height:26px;text-align:center;line-height:26px;font-size:14px;color:#fff;border-radius:15px;background-color: #ff3b30;"></span>
+        </a>
+    </div>
+
+    <div id="udesk_panel" style="position:fixed;bottom:-574px;right:60px;z-index:-1;width:364px;height:572px;overflow:hidden;display:none;background-color:transparent;box-shadow:0px 4px 12px 0px rgba(8,23,26,0.2);border-radius: 3px 3px 0px 0px;border:1px solid #ddd\9;transition:bottom 0.3s;-webkit-transition:bottom 0.3s;-moz-transition:bottom 0.3s;-ms-transition:bottom 0.3s;-o-transition:bottom 0.3s;">
+        <iframe id="udesk_iframe" frameborder="0" scrolling="no" allowtransparency="true" style="width:100%;height:0;border:none;padding:0;margin:0;float:none;background:none;transition:height 0.1s;-webkit-transition:height 0.1s;-moz-transition:height 0.1s;-ms-transition:height 0.1s;-o-transition:height 0.1s;" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="saved_resource.html">
+
+        </iframe>
+    </div>
+</div>
+
+</body>
+</html>
