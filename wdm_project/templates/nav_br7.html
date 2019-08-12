@@ -1,0 +1,167 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="about_wai">
+    	<div class="about_main">
+        	<div class="route">当前位置: <a href="http://www.wdmcake.cn/">首页</a></div>
+ 
+            <div class="about_info">
+            	<div class="about_left">
+                	<div class="n1">了解味多美</div>
+                                        <div><a href="http://www.wdmcake.cn/about.php?id=58">联系味多美</a></div>
+                                        <div><a href="http://www.wdmcake.cn/about.php?id=53">企业服务</a></div>
+                                        <div><a href="http://www.wdmcake.cn/about.php?id=40">味多美简介</a></div>
+                                        <div><a href="http://www.wdmcake.cn/about.php?id=39">味多美工业园</a></div>
+                                        <div><a href="http://www.wdmcake.cn/about.php?id=38">味多美文化</a></div>
+                                        <div><a href="http://www.wdmcake.cn/about.php?id=37">关于原料</a></div>
+                                        <div><a href="http://www.wdmcake.cn/about.php?id=36">味多美未来</a></div>
+                                    </div>
+                <div class="about_right">
+                    <div class="about_civilization">
+                    	<!---<div class="about_img"><img src="http://static.wdmcake.cn/themes/wdm/images/about_01.jpg" /></div>--->
+                        <div class="about_title"><div class="lump"></div>企业服务</div>
+                        <div class="about_text">
+                        	                            <p>&nbsp; &nbsp; &nbsp; &nbsp;味多美创立于1996年，是国内著名烘焙连锁食品品牌，主要经营中高端蛋糕、面包、咖啡、中西式点心、月饼、粽子等产品。数十年来，我们围绕客户的需求持续创新，与合作伙伴开放合作，在企业员工福利关怀、聚会庆典、商务活动定制、客户关系维护等方面为众多知名企业客户提供了优质的外包服务解决方案。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;作为中国烘焙行业引领者，长期以来，味多美坚持以优质的服务、健康美味的产品，努力给消费者提供高品质的生活享受。与此同时，我们力争成为广大企业客户的第一选择和最佳合作伙伴，成为深受消费者钟爱的品牌。</p>
+<p>&nbsp;<img width="790" height="347" alt="" src="./企业服务_files/qyfw.jpg"></p>
+<p>&nbsp;</p>
+<form method="post" action="http://www.wdmcake.cn/company.php?act=edit">
+    <table cellspacing="1" cellpadding="0" border="0" id="aboutForm">
+        <tbody>
+            <tr>
+                <td align="right">公司名称：</td>
+                <td width="550" class="red"><input type="text" class="companyInfo companyName" value="" name="company_name">*                     &nbsp;&nbsp;<span id="error_company_name" class="color_bc">输入正确的公司全称</span></td>
+            </tr>
+            <tr>
+                <td align="right">公司地址：</td>
+                <td class="red">
+                <ul>
+                    <li style="float:left;"><select name="country" id="country" onchange="region.changed(this, 1, &#39;province&#39;)" class="address">
+                    <option value="0">请选择</option>
+                    <option value="441">北京</option>
+                    </select></li>
+                    <li style="float:left;"><select name="province" id="province" onchange="region.changed(this, 2, &#39;city&#39;)" class="address">
+                    <option value="0">请选择</option>
+                    </select></li>
+                    <li style="float:left;"><select name="city" id="city" onchange="region.changed(this, 3, &#39;district&#39;)" class="address">
+                    <option value="0">请选择</option>
+                    </select></li>
+                    <li style="float:left;"><select eq="" id="district" name="district" class="address">
+                    <option value="0">请选择</option>
+                    </select></li>
+                </ul>
+                *&nbsp;&nbsp;<span id="error_company_name" class="color_bc">公司地址不能为空</span></td>
+            </tr>
+            <tr>
+                <td align="right">详细地址：</td>
+                <td class="red"><input type="text" class="companyInfo companyAddress" value="" name="address">                     *&nbsp;&nbsp;<span id="error_address" class="color_bc">请输入详细的公司地址</span></td>
+            </tr>
+            <tr>
+                <td align="right">公司人数：</td>
+                <td class="red"><input type="text" class="companyInfo" value="" name="people_number">                     *&nbsp;&nbsp;<span id="error_people_number" class="color_bc">公司人数不能为空</span></td>
+            </tr>
+            <tr>
+                <td align="right">联系人姓名：</td>
+                <td class="red"><input type="text" class="companyInfo" value="" name="name">                 	*&nbsp;&nbsp;<span id="error_name" class="color_bc">联系人姓名不能为空</span></td>
+            </tr>
+            <tr>
+                <td align="right">联系人手机：</td>
+                <td class="red"><input type="text" class="companyInfo" value="" name="mobile">                     *&nbsp;&nbsp;<span id="error_mobile" class="color_bc">请输入正确的联系人手机号</span></td>
+            </tr>
+            <tr>
+                <td align="right">公司办公电话：</td>
+                <td class="red"><input type="text" class="companyInfo" value="" name="tel">                     &nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="right">业务咨询内容：</td>
+                <td class="red"><textarea name="msg" class="companyInfo" rows="5" cols="70"></textarea>                     &nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td align="center"><input type="submit" class="submit" value="提交" name="submit"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<script type="text/javascript" src="./企业服务_files/jquery-1.11.1.min(1).js"></script> <script type="text/javascript" src="./企业服务_files/region.js"></script> <script type="text/javascript">
+$('input[name="company_name"]').blur(function(){
+	if($(this).val() == ""){
+		$(this).css('border','1px solid #f00');
+		$('#error_company_name').css('color','#cf0f25').text('公司名称不能为空');
+	}else{
+		$(this).css('border','1px solid #bcbcbc');
+		$('#error_company_name').css('color','#6C9').text('OK');
+	}
+});
+$('#city').blur(function(){
+	if($(this).val() == 0){
+		$(this).css('border','1px solid #f00');
+		$('#error_company_name').css('color','#cf0f25').text('公司地址不能为空');
+	}else{
+		$(this).css('border','1px solid #bcbcbc');
+		$('#error_company_name').css('color','#6C9').text('OK');
+	}
+});
+$('input[name="address"]').blur(function(){
+	if($(this).val() == ""){
+		$(this).css('border','1px solid #f00');
+		$('#error_address').css('color','#cf0f25').text('详细地址不能为空');
+	}else{
+		$(this).css('border','1px solid #bcbcbc');
+		$('#error_address').css('color','#6C9').text('OK');
+	}
+});
+$('input[name="people_number"]').blur(function(){
+	if(/^\d{1,}$/.test($(this).val()) == false){
+		$(this).css('border','1px solid #f00');
+		$('#error_people_number').css('color','#cf0f25').text('公司人数至少一位数字');
+	}else{
+		$(this).css('border','1px solid #bcbcbc');
+		$('#error_people_number').css('color','#6C9').text('OK');
+	}
+});
+$('input[name="name"]').blur(function(){
+	if($(this).val() == ""){
+		$(this).css('border','1px solid #f00');
+		$('#error_name').css('color','#cf0f25').text('联系人姓名不能为空');
+	}else{
+		$(this).css('border','1px solid #bcbcbc');
+		$('#error_name').css('color','#6C9').text('OK');
+	}
+});
+$('input[name="mobile"]').blur(function(){
+	if(/^1[3|4|5|8][0-9]\d{8}$/.test($(this).val()) == false){
+		$(this).css('border','1px solid #f00');
+		$('#error_mobile').css('color','#cf0f25').text('联系人电话格式不正确');
+	}else{
+		$(this).css('border','1px solid #bcbcbc');
+		$('#error_mobile').css('color','#6C9').text('OK');
+	}
+});
+var par = "attr";
+//获取当前URL
+var local_url = document.location.href;
+//获取要取得的get参数位置
+var get = local_url.indexOf(par +"=");
+//截取字符串
+var get_par = local_url.slice(par.length + get + 1);   
+//判断截取后的字符串是否还有其他get参数
+var nextPar = get_par.indexOf("&");
+if(nextPar != -1){
+	get_par = get_par.slice(0, nextPar);
+}
+if(get_par == 'ok'){
+	alert('操作成功！');
+}
+</script>                                                                                </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

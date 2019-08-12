@@ -1,0 +1,51 @@
+/* 酷站代码整理 http://www.5icool.org */
+*{margin:0;padding:0}
+button,input,select,textarea{font:12px/1.5 \5B8B\4F53,tahoma,arial}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+ul,ol{list-style:none outside none}
+form,img,input{border:none 0}
+em,var,address,cite,dfn{font-style:normal}
+a:link{color:#333;text-decoration:none;outline:0 none}
+a:visited{color:#333;text-decoration:none;outline:0 none}
+a:hover{color:#83b842;text-decoration:underline;outline:0 none}
+a:active{color:#83b842;text-decoration:none;outline:0 none}
+body{background:#fff}
+.contentall{width:100%;position:relative}
+.IndexContentBox{width:1170px;position:relative;margin:0 auto}
+.IndexContentMain{width:1170px;margin-left:auto;margin-right:auto}
+.slides ul.imgList{position:absolute}
+.slides ul.imgList li{float:left;width:1170px}
+.slides ul.imgList li img{width:1170px;height:500px;}
+.slides ul.imgList li a{text-decoration:none;outline:0;cursor:pointer}
+.slides div.btnList{width:1170px;height:70px;text-align:center}
+.slides div.btnList a{padding:2px;position:relative}
+.slides div.btnList a .ScrollArr{visibility:hidden}
+.slides div.btnList a.curr{border:2px solid #83b842;padding:0}
+.slides div.btnList a.curr .ScrollArr{visibility:visible;top:-6px;left:48px}
+.IndexProduct{float:left}
+.slides{position:relative;height:490px;overflow:hidden;float:left}
+.slides .btnList .cur{border:2px solid #666;zoom:1}
+.slides .btnList img{display:inline}
+.slides .imgList{text-align:center;width:100%}
+.slides .numList{position:absolute;right:8px;bottom:10px;z-index:3}
+#slides .numList a,#slides .BtnNumList a{width:20px;height:20px;background:#3e3e3e;border-radius: 50%;text-align:center;display:block;float:left;_display:inline;*zoom:1;margin-right:2px;line-height:20px;cursor: pointer; color:#fff;}
+#slides .numList a.cur,#slides .BtnNumList a.cur{background:#b61b1f;text-decoration:none;color:#fff;}
+.slides .BtnimgList{display:inline-block;*display:inline;margin-left:auto;margin-right:auto;bottom:-590px;height:60px;position:relative;background:#000;background:url(btnimglistbj130607.png) repeat-x left center;padding:2px;zoom:1}
+.BtnimgList a *{position:relative}
+.slides .BtnNumList{width:1170px;height:20px;text-align:center}
+.slides .BtnNumWrap{position:relative;display:inline-block;*display:inline;text-align:center;z-index:3;margin-left:auto;margin-right:auto;bottom:-390px;zoom:1}
+.indexBanner{height:500px;width:1170px;overflow:hidden;background-color:#fff}
+.pagesliderWrap{clear:both;position:relative}
+.pagingArrowWrap{width:22px;height:65px;position:absolute;text-align:center}
+.pagingArrowWrap.prev{left:0}
+.pagingArrowWrap.next{right:0}
+.pagingArrowWrap .arrow{height:45px;display:block;cursor:pointer}
+.pagingArrowWrap.prev .arrow{background:url(btnPrevbg.gif) no-repeat}
+.pagingArrowWrap.next .arrow{background:url(btnNextbg.gif) no-repeat}
+.pagingArrowWrap .pagingCount{height:18px;line-height:16px;text-align:center;width:22px}
+.IndexContentMain .pagingArrowWrap{width:55px;height:73px;display:none;}
+.IndexContentMain .pagingArrowWrap .arrow,.IndexContentMain .pagingArrowWrap .arrow:hover{height:73px;background:url(icon_hmBannerArrow130607.png) no-repeat}
+.IndexContentMain .pagingArrowWrap.prev .arrow{background-position:0 -120px}
+.IndexContentMain .pagingArrowWrap.prev .arrow:hover{background-position:-65px -120px;background-color:#83b842}
+.IndexContentMain .pagingArrowWrap.next .arrow{background-position:0 -220px}
+.IndexContentMain .pagingArrowWrap.next .arrow:hover{background-position:-65px -220px;background-color:#83b842}

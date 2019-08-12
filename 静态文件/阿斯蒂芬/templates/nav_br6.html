@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)https://m.bigaka.com/user/main.do?methodName=goLogin&fromUrl=%2Fjfmall%2FtoJFMallPage.do%3Fstoreid%3D18736 -->
+<html data-dpr="1" style="font-size: 247.867px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="舞象商城">
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./礼品兑换_files/jquery.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jweixin" src="./礼品兑换_files/jweixin-1.3.2.js"></script><!--<base href="/">--><base href=".">
+
+
+
+
+
+
+
+
+<!-- 本地开发环境 -->
+
+
+
+<script src="./礼品兑换_files/hm.js"></script><script type="text/javascript">
+var ctx = '';
+var resourcePath = '/base/dist';
+
+var shareImgPath = '/base/dist';
+var version = '6.22.0.3.6.7';
+window.ctx = ctx;
+window.resourcePath = resourcePath
+window.shareImgPath = shareImgPath
+</script>
+
+<script type="text/javascript">
+if(window.location.href.indexOf('order/main.do') < 0){
+	window.localStorage.removeItem('vote-date');
+	window.localStorage.removeItem('vote-date-userid');
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var onOffOpenim='0',
+	parentStoreId='18736';
+	
+var storeCongigObj = {
+	storeName: '北京味多美',
+	mallTime: '0:00-24:00',
+	mallOpenStatus: '1',
+	takeawayStatus: '1',
+	goTakeAwayAddressPath: [ctx + '/page/main.do', ctx + '/activity/main.do'],
+	storeStatus: '0',
+    supportTakeOut: '0',
+    deliveryArea: '6',
+    quickOrderNavStyle: '1'
+}
+if(storeCongigObj.mallTime == ''){
+	storeCongigObj.mallTime = '0:00-24:00'
+}
+
+// 外卖商城配置
+if(storeCongigObj.takeawayStatus == '1' && storeCongigObj.goTakeAwayAddressPath.indexOf(window.location.pathname) >= 0 && !window.sessionStorage.getItem('takeAwayAddress_' + parentStoreId)){ // 开启了外卖商城且没有选择收货地址，跳转地址选择页面
+	if (storeCongigObj.supportTakeOut == '1') {
+        window.location.href = ctx + '/address/main.do?methodName=takeAway&storeid=18736&salesid=&fromUrl='+encodeURIComponent(window.location.href)
+	} else { // 不支持外卖配送,跳转首页
+        window.sessionStorage.setItem('takeAwayAddress_' + parentStoreId, 'empty');
+        window.location.href = ctx + '/page/main.do?methodName=goMain&storeid=18736&salesid='
+    }
+}
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/style.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/utils.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/updatestyle.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/common.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/pScroll.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/animate.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/shake.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/lucky-page.css">
+
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/bargain.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/styles.css">
+<link rel="stylesheet" type="text/css" href="./礼品兑换_files/wxmall-module.css">
+
+<script type="text/javascript" src="./礼品兑换_files/require.js"></script>
+<script type="text/javascript" src="./礼品兑换_files/polyfill.js"></script>
+<script type="text/javascript" src="./礼品兑换_files/jcommom.vendors.js"></script>
+<script type="text/javascript" src="./礼品兑换_files/util.vendors.js"></script>
+<script type="text/javascript" src="./礼品兑换_files/vendor.vendors.js"></script>
+<script src="./礼品兑换_files/flexible.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="./礼品兑换_files/styles.js"></script>
+<script type="text/javascript" src="./礼品兑换_files/geolocation.min.js"></script>
+</head><body style="background-color:#f2f2f2;"><input type="hidden" id="storeObj_val" value="{&quot;account_name&quot;:&quot;&quot;,&quot;account_number&quot;:&quot;&quot;,&quot;address&quot;:&quot;枫蓝国际购物中心&quot;,&quot;alipay_pay_status&quot;:&quot;1&quot;,&quot;bank_id&quot;:&quot;&quot;,&quot;bindingRegistryStore&quot;:&quot;0&quot;,&quot;binding_registry_store&quot;:&quot;0&quot;,&quot;branch&quot;:&quot;&quot;,&quot;brief&quot;:&quot;北京味多美&quot;,&quot;code&quot;:&quot;wdmbj000&quot;,&quot;comment_status&quot;:&quot;0&quot;,&quot;contact&quot;:&quot;张瑞&quot;,&quot;count_limit_offline_order_retry&quot;:&quot;0&quot;,&quot;coupons_status&quot;:&quot;0&quot;,&quot;create_time&quot;:&quot;2019-04-30 10:49:30&quot;,&quot;create_user_id&quot;:&quot;49481&quot;,&quot;credit_ivory_rate&quot;:&quot;0.00&quot;,&quot;credit_rating&quot;:&quot;AAA&quot;,&quot;credits_usable&quot;:&quot;0&quot;,&quot;cusTelephone&quot;:&quot;&quot;,&quot;defaultWXDomainUrl&quot;:&quot;https://m.bigaka.com/&quot;,&quot;defaultWXServiceDomainUrl&quot;:&quot;http://im.bigaka.com/mall/talk&quot;,&quot;deliverMode&quot;:&quot;0&quot;,&quot;delivery_area&quot;:&quot;6&quot;,&quot;deposit_monthly&quot;:&quot;0&quot;,&quot;discount_limits_status&quot;:&quot;0&quot;,&quot;district_id&quot;:&quot;110108&quot;,&quot;domainUrl&quot;:&quot;https://m.bigaka.com/&quot;,&quot;email&quot;:&quot;zhangrui@wdmcake.com&quot;,&quot;expire_time&quot;:&quot;0&quot;,&quot;fee_monthly&quot;:&quot;0&quot;,&quot;full_name&quot;:&quot;北京味多美&quot;,&quot;headLogoUrl&quot;:&quot;https://photoshop.bigaka.com/photos//18736/201905/62561557297318539_144_144.png&quot;,&quot;headStoreName&quot;:&quot;北京味多美&quot;,&quot;id&quot;:&quot;138&quot;,&quot;isPrivateStock&quot;:&quot;n&quot;,&quot;is_offline_order_sync_retry&quot;:&quot;0&quot;,&quot;is_offline_pay&quot;:&quot;n&quot;,&quot;is_open&quot;:&quot;n&quot;,&quot;is_show_sidebar&quot;:&quot;true&quot;,&quot;is_show_top&quot;:&quot;true&quot;,&quot;jumpFocusStore&quot;:&quot;1&quot;,&quot;justwx_status&quot;:&quot;0&quot;,&quot;latitude&quot;:&quot;39.958725&quot;,&quot;license_code&quot;:&quot;&quot;,&quot;license_time1&quot;:&quot;&quot;,&quot;license_url&quot;:&quot;&quot;,&quot;limit_near_store&quot;:&quot;1&quot;,&quot;logo_url&quot;:&quot;https://photoshop.bigaka.com/photos//18736/201905/62561557297318539_144_144.png&quot;,&quot;long_term&quot;:&quot;0&quot;,&quot;longitude&quot;:&quot;116.36334&quot;,&quot;mallOpenStatus&quot;:&quot;1&quot;,&quot;mallTime&quot;:&quot;0:00-24:00&quot;,&quot;masterAccount&quot;:&quot;1&quot;,&quot;meituan_pay_status&quot;:&quot;0&quot;,&quot;mode&quot;:&quot;40&quot;,&quot;modify_time&quot;:&quot;2019-06-13 14:57:30&quot;,&quot;navigation_kg&quot;:&quot;1&quot;,&quot;near_store_num&quot;:&quot;10&quot;,&quot;onOffOpenim&quot;:&quot;0&quot;,&quot;openTaobaoAppkey&quot;:&quot;&quot;,&quot;openTaobaoAppsecret&quot;:&quot;&quot;,&quot;openType&quot;:&quot;1&quot;,&quot;open_order&quot;:&quot;0&quot;,&quot;open_taobao_appkey&quot;:&quot;&quot;,&quot;open_taobao_appsecret&quot;:&quot;&quot;,&quot;open_time&quot;:&quot;0&quot;,&quot;open_type&quot;:&quot;1&quot;,&quot;orderOpen&quot;:&quot;0&quot;,&quot;order_sku_show&quot;:&quot;0&quot;,&quot;orgNodeCode&quot;:&quot;&quot;,&quot;orgNodeName&quot;:&quot;味多美&quot;,&quot;org_node_id&quot;:&quot;18621&quot;,&quot;page_template&quot;:&quot;0&quot;,&quot;parentId&quot;:&quot;18736&quot;,&quot;points_status&quot;:&quot;0&quot;,&quot;privateStore&quot;:&quot;y&quot;,&quot;private_store&quot;:&quot;y&quot;,&quot;product_qtylimit&quot;:&quot;-1&quot;,&quot;promotion_qtylimit&quot;:&quot;-1&quot;,&quot;qianfang_pay_status&quot;:&quot;0&quot;,&quot;quick_order_nav_style&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;0.00&quot;,&quot;realParentId&quot;:&quot;18621&quot;,&quot;remark&quot;:&quot;&quot;,&quot;short_name&quot;:&quot;北京味多美&quot;,&quot;signin_status&quot;:&quot;1&quot;,&quot;statisticsJs&quot;:&quot;&lt;script&gt;\r\nvar _hmt = _hmt || [];\r\n(function() {\r\n  var hm = document.createElement(\&quot;script\&quot;);\r\n  hm.src = \&quot;https://hm.baidu.com/hm.js?710af3e62953fb44c4759dc77392e27a\&quot;;\r\n  var s = document.getElementsByTagName(\&quot;script\&quot;)[0]; \r\n  s.parentNode.insertBefore(hm, s);\r\n})();\r\n&lt;/script&gt;\r\n&quot;,&quot;statisticsStatus&quot;:&quot;1&quot;,&quot;statistics_js&quot;:&quot;&lt;script&gt;\r\nvar _hmt = _hmt || [];\r\n(function() {\r\n  var hm = document.createElement(\&quot;script\&quot;);\r\n  hm.src = \&quot;https://hm.baidu.com/hm.js?710af3e62953fb44c4759dc77392e27a\&quot;;\r\n  var s = document.getElementsByTagName(\&quot;script\&quot;)[0]; \r\n  s.parentNode.insertBefore(hm, s);\r\n})();\r\n&lt;/script&gt;\r\n&quot;,&quot;statistics_status&quot;:&quot;1&quot;,&quot;status&quot;:&quot;30&quot;,&quot;store_guest_check&quot;:&quot;1&quot;,&quot;store_id&quot;:&quot;18736&quot;,&quot;store_status&quot;:&quot;0&quot;,&quot;subType&quot;:&quot;2&quot;,&quot;sun_micro_rule&quot;:&quot;0&quot;,&quot;super_rate&quot;:&quot;0.00&quot;,&quot;supportDelivery&quot;:&quot;0&quot;,&quot;supportPickUp&quot;:&quot;0&quot;,&quot;supportTakeOut&quot;:&quot;0&quot;,&quot;takeaway_status&quot;:&quot;1&quot;,&quot;telephone&quot;:&quot;18614022022&quot;,&quot;type&quot;:&quot;0&quot;,&quot;ucode&quot;:&quot;&quot;,&quot;weixin_pay_status&quot;:&quot;1&quot;,&quot;workStatus&quot;:&quot;0&quot;,&quot;workTaobaoUid&quot;:&quot;&quot;,&quot;work_taobao_uid&quot;:&quot;&quot;,&quot;yi_pay_status&quot;:&quot;0&quot;,&quot;yibao_pay_status&quot;:&quot;0&quot;}">
+<input type="hidden" id="storeid_val" value="18736">
+<input type="hidden" id="salesid_val" value="">
+<input type="hidden" id="userid_val" value="">
+<script type="text/javascript">
+    // æ¿æ¢æäº¤åæ°ä¸­çææå­ç¬¦é¢é²xssæ»å»
+    var HtmlUtil = {
+        /*1.ç¨æ­£åè¡¨è¾¾å¼å®ç°htmlè½¬ç */
+        htmlEncodeByRegExp: function (str) {
+            var s = "";
+            if (str.length == 0) return "";
+            s = str.replace(/&/g, "&amp;");
+            s = s.replace(/</g, "&lt;");
+            s = s.replace(/>/g, "&gt;");
+            s = s.replace(/ /g, "&nbsp;");
+            s = s.replace(/\'/g, "&#39;");
+            s = s.replace(/\"/g, "&quot;");
+            return s;
+        },
+        /*2.ç¨æ­£åè¡¨è¾¾å¼å®ç°htmlè§£ç */
+        htmlDecodeByRegExp: function (str) {
+            var s = "";
+            if (str.length == 0) return "";
+            s = str.replace(/&amp;/g, "&");
+            s = s.replace(/&lt;/g, "<");
+            s = s.replace(/&gt;/g, ">");
+            s = s.replace(/&nbsp;/g, " ");
+            s = s.replace(/&#39;/g, "\'");
+            s = s.replace(/&quot;/g, "\"");
+            return s;
+        }
+    };
+
+</script>
+
+<script>
+    var _wx_access_log_ = {};
+    _wx_access_log_.log = function (ev, type, val) {
+        var formData = new FormData();
+        formData.append('class', ev);
+        formData.append('type', type);
+        formData.append('val', val || 0);
+        //åå»ºxhrå¯¹è±¡
+        var xhr = new XMLHttpRequest();
+        //è®¾ç½®xhrè¯·æ±çè¶æ¶æ¶é´
+        xhr.timeout = 3000;
+        //è®¾ç½®ååºè¿åçæ°æ®æ ¼å¼
+        xhr.responseType = "text";
+        //åå»ºä¸ä¸ª post è¯·æ±ï¼éç¨å¼æ­¥
+        xhr.open('POST', ctx + '/accessLog/log.do', true);
+        //è¨­ç½® header X-Requested-With:XMLHttpRequest
+        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        //æ³¨åç¸å³äºä»¶åè°å¤çå½æ°
+        xhr.onload = function (e) {
+            if (this.status == 200 || this.status == 304) {
+                console.log(e.target.responseText);
+            }
+        };
+        //åéæ°æ®
+        xhr.send(formData);
+    };
+    function urlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]); return null;
+    }
+</script>
+
+
+<!-- <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259097913'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259097913' type='text/javascript'%3E%3C/script%3E"));</script>-->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1259419277'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259419277' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1259419277"><a href="https://www.cnzz.com/stat/website.php?web_id=1259419277" target="_blank" title="站长统计">站长统计</a></span><script src="./礼品兑换_files/z_stat.php" type="text/javascript"></script><script src="./礼品兑换_files/core.php" charset="utf-8" type="text/javascript"></script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?710af3e62953fb44c4759dc77392e27a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+    /* Ã¥Â¦ÂÃ¦ÂÂÃ¦Â²Â¡Ã¦ÂÂÃ©ÂÂÃ§Â½Â®Ã§ÂÂ¾Ã¥ÂºÂ¦Ã§Â»ÂÃ¨Â®Â¡Ã¯Â¼ÂÃ¨ÂÂªÃ¥Â®ÂÃ¤Â¹ÂÃ¥ÂÂ¨Ã¥Â±ÂÃ¥ÂÂÃ©ÂÂÃ¤Â¿ÂÃ¨Â¯ÂÃ¤Â¸ÂÃ¦ÂÂ¥Ã©ÂÂ */
+    if (typeof (_hmt) == 'undefined') {
+        var _hmt = {};
+        _hmt.push = function () {
+
+        }
+    }
+    if (typeof (_czc) == 'undefined') {
+        var _czc = {};
+        _czc.push = function () {
+
+        }
+    }
+    window.WX = window.WX || {};
+    WX.cookieMod = {
+        setCookie: function (name, value, exptime) {
+            var now = new Date();
+            var time = now.getTime();
+            time += 1000 * 60 * 60 * exptime;
+            now.setTime(time);
+            document.cookie = name + '=' + value + ';path=' + ctx + '/;expires=' + now.toUTCString();
+            if (name == "userid" && value != "") {
+                $.ajax({
+                    url: ctx + "/user/main.do?methodName=setUser&userid=" + value,
+                    async: false,
+                    success: function () {
+                        $(".userHasLogin").show();
+                        $(".userNoLogin").hide();
+                    }
+                });
+            }
+        },
+        getCookie: function (name) {
+            var cArr = document.cookie.split('; ');
+            for (var i = 0; i < cArr.length; i++) {
+                var cArr2 = cArr[i].split('=');
+                if (cArr2[0] == name) {
+                    return cArr2[1];
+                }
+            }
+            return '';
+        },
+        removeCookie: function (name) {
+            WX.cookieMod.setCookie(name, 1, -9);
+        }
+    };
+    require.config({
+        baseUrl: resourcePath + '/modules/app/',
+        urlArgs: 'v=' + version,
+        paths: {
+            clipboard: resourcePath + '/modules/libs/' + 'clipboard',
+            vue: resourcePath + '/modules/libs/' + 'vue',
+            vConsole: resourcePath + '/modules/libs/' + 'vconsole.min',
+            lazyload: resourcePath + '/modules/libs/' + 'jquery.lazyload.min',
+            swiper: resourcePath + '/modules/libs/' + 'swiper.min',
+            jquery: resourcePath + '/modules/libs/' + 'jquery',
+            cookies: resourcePath + '/modules/libs/' + 'cookies',
+            toast: resourcePath + '/modules/libs/' + 'toast',
+            cartMsgCount: resourcePath + '/modules/libs/' + 'cartMsgCount',
+            pagination: resourcePath + '/modules/libs/' + 'pagination',
+            page: resourcePath + '/modules/libs/' + 'page',
+            clone: resourcePath + '/modules/libs/' + 'clone',
+            address: resourcePath + '/modules/libs/' + 'address',
+            addrManage: resourcePath + '/modules/libs/' + 'addrManage',
+            cityutils: resourcePath + '/modules/libs/' + 'CityUtils',
+            urlParam: resourcePath + '/modules/libs/' + 'urlParam',
+            crm: resourcePath + '/modules/libs/' + 'rongcloud',
+            rongModule: resourcePath + '/modules/libs/' + 'rongModule',
+            message: resourcePath + '/modules/libs/' + 'message',
+            jqueryEasing: resourcePath + '/modules/libs/' + 'jquery.easing.min',
+            jqueryRotate: resourcePath + '/modules/libs/' + 'jQueryRotate',
+            qrcode: resourcePath + '/modules/libs/' + 'jquery.qrcode.min',
+            date: resourcePath + '/modules/libs/' + 'date',
+            moment: resourcePath + '/modules/libs/' + 'moment',
+            lodash: resourcePath + '/modules/libs/' + 'lodash',
+            iscroll: resourcePath + '/modules/libs/' + 'iscroll',
+            iscroll5: resourcePath + '/modules/libs/' + 'iscroll5',
+            iscrol5: resourcePath + '/modules/libs/' + 'iscroll5',
+            init: resourcePath + '/modules/libs/' + 'init',
+            headStyle: resourcePath + '/modules/libs/' + 'headStyle',
+            menu: resourcePath + '/modules/libs/' + 'menu',
+            lottery: resourcePath + '/modules/libs/' + 'lottery',
+            jweixin: '//res.wx.qq.com/open/js/jweixin-1.3.2',
+            dropload: resourcePath + '/modules/libs/' + 'dropload',
+            weixin: resourcePath + '/modules/libs/' + 'weixin',
+            wxConfirm: resourcePath + '/modules/libs/' + 'wxConfirm',
+            wsdk: resourcePath + '/modules/libs/' + 'wsdk',
+            identityCodeValidi: resourcePath + '/modules/libs/' + 'identityCodeValidi',
+            jsBarcode: resourcePath + '/modules/libs/' + 'jsBarcode',
+            wxmallModule: resourcePath + '/modules/libs/' + 'wxmallModule',
+            autosize: resourcePath + '/modules/libs/' + 'autosize',
+            txMap: resourcePath + '/modules/libs/' + 'TxMap',
+            geolocation: resourcePath + '/modules/libs/' + '//apis.map.qq.com/tools/geolocation/min?key=TKMBZ-BVW3S-QZGOE-6E7OD-2TGRT-BXBL7&referer=bigaka',
+            base64: resourcePath + '/modules/libs/' + 'jquery.base64',
+            selectProduct: resourcePath + '/modules/libs/' + 'selectProduct',
+            selectSku: resourcePath + '/modules/libs/' + 'selectSku'
+        },
+        shim: {
+            'lazyload': {
+                deps: ['jquery']
+            },
+            'jqueryEasing': {
+                deps: ['jquery']
+            },
+            'jqueryRotate': {
+                deps: ['jquery']
+            },
+            'dropload': {
+                deps: ['jquery']
+            },
+            'date': {
+                deps: ['jquery']
+            },
+            'qrcode': {
+                deps: ['jquery']
+            },
+            'base64': {
+                deps: ['jquery']
+            }
+        },
+        waitSeconds: 0
+    });
+
+</script>
+
+
+    
+        
+        
+    
+
+
+	<style>
+		.btn-orange,.btn-code {
+			background-color: #CA1566;
+		}
+	</style>
+
+<title>登录/注册</title>
+
+	
+		
+
+
+
+	
+
+
+
+
+
+<img class="gift-float-icon" alt="会员礼遇" src="./礼品兑换_files/gift-float2.png">
+<div class="customer-gift-modal hide">
+	<div class="gift-modal-content">
+		<img class="gift-modal-title" alt="" src="./礼品兑换_files/gift-modal-bg.png">
+		<div class="gift-modal-coupons">
+		</div>
+		<div class="gift-modal-bottom">
+			<button class="gift-modal-btn">立即领取</button>
+		</div>
+	</div>
+	<img class="gift-modal-close" alt="" src="./礼品兑换_files/gift-modal-close.png">
+</div>
+
+
+<div class="head">
+	<a class="head-go-main clearfix" href="https://m.bigaka.com/page/main.do?methodName=goMain&amp;storeid=18736&amp;salesid=">
+		<img class="shop-icon" src="./礼品兑换_files/62561557297318539_144_144.png">
+	</a>
+	<!-- 切换门店开关 storeStatus-->
+	<a class="head-shop-name ">
+		<span>北京味多美</span>
+		
+	</a>
+	<div class="head-user-opera">
+		
+			<a class="pull-r userNoLogin" style="display: inline-block;" id="top_login_regist">登录/注册</a>
+			<a class="pull-r userNoLogin" style="display: none" id="top_regist">注册</a>
+			<a class="pull-r userNoLogin" style="display: none" id="top_login">登录</a>
+		
+		
+	</div>
+	<a class="head-search">
+		<img alt="搜索" src="./礼品兑换_files/head-search.png">
+	</a>
+</div>
+
+
+<!-- search  -->
+<div class="search-poup" style="display:none;">
+	<div class="search_div">
+		<a class="cancel-search">取消</a>
+		<div class="search_input">
+			<input type="text" class="gewei_search" value="" placeholder="请输入关键字搜索">
+			<span id="hide_search_btn"><button class="btn-yellow">搜索</button></span>
+		</div>
+	</div>
+	<div class="search_hot">
+	</div>
+</div>
+<header></header>
+		<div class="regist step_first">
+			
+				
+					<img id="login_bg" src="./礼品兑换_files/77511557824705038.jpg">
+				
+				
+			
+			<div class="input phone_input">
+				<input type="tel" placeholder="请输入手机号码" id="mphoneNumber">
+			</div>
+			<div class="input code_input">
+               <div>
+               		<input type="tel" name="checkCode" class="form-control" id="checkCodeId" placeholder="请输入验证码">
+               		<div class="checkCodeDiv">
+				 		<img id="yzImg" src="./礼品兑换_files/random.do" alt="看不清?点击图片换一张">
+               		</div>
+               </div>
+            </div>
+			<div class="input vali_input">
+				<input type="tel" placeholder="请输入验证码" name="theValidaCode" id="theValidaCode">
+				<button class="pull-r btn-code" id="getValidacode">获取验证码<em></em></button>
+			</div>
+			
+			
+			
+			<button class="btn-orange btn-step btn_ajax" disabled="">
+				<span>手机号快捷登录</span>
+				<img src="./礼品兑换_files/loading.gif">
+			</button>
+			
+			
+		</div>
+		<script type="text/javascript">
+			var config = '{"id":171,"registerBottomPic":"","registerButtonColor":"#CA1566","registerConfig":2,"registerDefaultStatus":0,"registerTopPic":"https://photoshop.bigaka.com/photos//18736/201905/77511557824705038.jpg","storeId":18736}';
+			var registerConfig = '2';
+			var storeCounts = parseInt('302');
+			var storeStatus = '0';
+			var shopName = '北京味多美';
+		</script>
+		<script src="./礼品兑换_files/regist.js" type="text/javascript"></script>
+	
+
+<div class="confirm-mask" style="display:none"><div class="animated fast confirm-modal"><div class="confirm-content"><p class="confirm-string"></p></div><div class="confirm-foot clearfix"><button class="btn-confirm pull-l">确认</button><button class="btn-cancel pull-r">关闭</button></div></div></div><div class="prompt-mask" style="display:none"><div class="animated fast prompt-modal"><span class="close-prompt"></span><div class="prompt-head"><h4 class="prompt-string">请输入</h4></div><div class="prompt-content"><input type="tel" maxlength="50" class="prompt-input"></div><div class="prompt-foot clearfix"><button class="btn-confirm">确认</button></div></div></div><div id="toast"><div id="toast_msg"></div></div></body></html>

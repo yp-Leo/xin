@@ -1,0 +1,101 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="users_wai">
+<div class="users_main">
+    <div class="route"><span class="color_75 cursor">首页</span>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<span class="color_bc cursor">会员中心</span></div>
+    <div class="users_info">
+        <div class="user_left">
+         <div class="n1">我的购物车</div>
+<div><a href="http://www.wdmcake.cn/user.php?act=order_list">我的订单</a></div>
+<div><a href="http://www.wdmcake.cn/user.php?act=collection_list">我的收藏</a></div>
+<div class="n1">我的账户</div>
+<div><a href="http://www.wdmcake.cn/user.php?act=points">我的积分</a></div>
+<div><a target="_blank" href="https://m.bigaka.com/user-center/main.do?methodName=memberCenter&amp;storeid=18736">我的代金券</a></div>
+<div class="n1">个人信息管理</div>
+<div><a href="http://www.wdmcake.cn/user.php?act=profile">修改个人信息</a></div>
+<div><a href="http://www.wdmcake.cn/user.php?act=edit_password">修改密码</a></div>
+<div><a href="http://www.wdmcake.cn/user.php?act=address_list">修改收货地址</a></div>
+<!---<div class="n1">会员服务</div>--->
+<!---<div><a href="user.php?act=family">全家生日惠</a></div>--->
+<!---<div><a href="user_policy.php" target="_blank">积分兑换</a></div>--->
+<!---<div><a href="user.php?act=wish">心愿墙</a></div>>--->
+<div><a href="http://www.wdmcake.cn/user.php?act=logout">退出</a></div> 
+        </div>
+        <div class="user_right">
+            <div class="user_summary">
+                <!--<div class="user_head"><img src="http://static.wdmcake.cn/themes/wdm/images/users_01.jpg" /></div>-->
+                <div class="user_info">
+                    <div class="user_name">亲爱的17864219845，欢迎进入会员中心！</div>
+                    <div class="information">
+                        <div>您目前是：<span class="red">注册用户</span></div><div></div>
+                        <div>账户总积分：50积分</div><div>预存款余额：￥0.00</div>
+                        <div>交易提醒： 未付款订单&nbsp;<span class="lump">0</span><!--&nbsp;到货通知&nbsp;<span class="lump">1</span>--></div>
+                    </div>
+                    <div class="remind"></div>
+                </div>
+            </div>
+            <div class="user_order">
+                <div class="user_title"><div class="lump"></div>我的订单<span><a class="color_bc" href="http://www.wdmcake.cn/user.php?act=order_list">所有的订单</a></span></div>
+                <div class="user_text">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <th>订单编号</th>
+                            <th>金额</th>
+                            <th>下单时间</th>
+                            <th>订单状态</th>
+                            <th>操作</th>
+                        </tr>
+                                                
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="user_enshrine">
+                <div class="user_title"><div class="lump"></div>我的收藏<span><a class="color_bc" href="http://www.wdmcake.cn/user.php?act=collection_list">所有的收藏</a></span></div>
+                <div class="user_text">
+                
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <th>商品名称</th>
+                            <th>商品价格</th>
+                            <th>是否有货</th>
+                            <th>操作</th>
+                        </tr>
+                                                                        <tr>
+                            <td>
+                                <div class="goods_img"><a href="http://www.wdmcake.cn/user.php"><img src="./会员中心_files/2252_G_1563839248366.jpg"></a></div>
+                                <div class="name_time">
+                                    <div class="goods_name">双层北极熊蛋糕</div>
+                                    <div class="add_time">收藏时间：2019-08-06</div>
+                                </div>
+                            </td>
+                            <td>
+                                ￥498.00                            </td>
+                            <td>有货</td>
+                            <td>
+                                <div class="submit">
+                                    <a href="javascript:addToCart(2252,0,3118)">加入购物车</a></div>
+                                    <a href="javascript:if (confirm(&#39;您确定要从收藏夹中删除选定的商品吗？&#39;))location.href=&#39;user.php?act=delete_collection&amp;collection_id=7877&#39;">删除</a>
+                            </td>
+                        </tr>
+                                                                    </tbody></table>
+                </div>
+            </div>
+            
+                    </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</div>
+
+
+    
+{% endblock %}
+
+
+
+
+

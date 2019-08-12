@@ -1,0 +1,68 @@
+/* http://keleyi.com */
+#popup_container {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	min-width: 300px; /* Dialog will be no smaller than this */
+	max-width: 600px; /* Dialog will wrap after this width */
+	background: #FFF;
+	border: solid 5px #ccc;
+	color: #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 2px;
+}
+
+#popup_title {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.75em;
+	color: #666;
+	background: #CCC url(title.gif) top repeat-x;
+	border: solid 1px #FFF;
+	border-bottom: solid 1px #999;
+	cursor: default;
+	padding: 0em;
+	margin: 0em;
+	display:none;
+}
+
+#popup_content {
+	padding: 1em 1.75em;
+	margin: 0em;
+}
+
+#popup_content.alert {
+	background-image: url(info.gif);
+}
+
+#popup_content.confirm {
+	background-image: url(important.gif);
+}
+
+#popup_content.prompt {
+	background-image: url(help.gif);
+}
+
+#popup_message {
+	font-family:"微软雅黑";
+	color:#cf0f25;
+	font-size:14px;
+	font-weight:500;
+	text-align:center;
+}
+
+#popup_panel {
+	text-align: center;
+	margin: 1em 0em 0em 0em;
+}
+#popup_ok {
+	width:70px;
+	height:30px;
+	border:1px solid #bcbcbc;
+	color:#333;
+	background-color:#eee;
+}
+#popup_prompt {
+	margin: .5em 0em;
+}

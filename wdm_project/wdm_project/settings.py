@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from datetime import timedelta
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App.apps.AppConfig',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +81,10 @@ WSGI_APPLICATION = 'wdm_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wdm_project',
-        'HOST':'127.0.0.1',
+        'NAME': 'weiduom',
+        'HOST':'10.0.108.104',
         'USER':'root',
-        'PASSWORD':'170526',
+        'PASSWORD':'123456',
         'PORT':3306
     }
 }
@@ -117,7 +120,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False #与数据库时间同步
 
 
 # Static files (CSS, JavaScript, Images)
@@ -127,3 +130,18 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 os.path.join(BASE_DIR, 'static'),
 ]
+
+PASSWORD_HASHERS = [
+    # 'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    # 'django.contrib.auth.hashers.BCryptPasswordHasher',
+]
+
+
+#COOKIE设置
+#默认3天过期
+MAXAGE = 3 * 24 * 3600
+TIMEDELTA = timedelta(days=3)
+SALTVALUE = '5sdf5a1f5'
