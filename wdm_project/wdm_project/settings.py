@@ -40,7 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App.apps.AppConfig',
-    'users',
+]
+
+# auth模块中密码加密算法
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
 ]
 
 MIDDLEWARE = [
@@ -81,10 +89,11 @@ WSGI_APPLICATION = 'wdm_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'weiduom',
-        'HOST':'10.0.108.104',
+        # 'NAME': 'wdm_project',
+        'NAME': 'wdm_test',
+        'HOST':'127.0.0.1',
         'USER':'root',
-        'PASSWORD':'123456',
+        'PASSWORD':'170526',
         'PORT':3306
     }
 }
@@ -120,7 +129,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = False #与数据库时间同步
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -131,17 +140,8 @@ STATICFILES_DIRS = [
 os.path.join(BASE_DIR, 'static'),
 ]
 
-PASSWORD_HASHERS = [
-    # 'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-    'django.contrib.auth.hashers.Argon2PasswordHasher',
-    # 'django.contrib.auth.hashers.BCryptPasswordHasher',
-]
-
-
 #COOKIE设置
 #默认3天过期
 MAXAGE = 3 * 24 * 3600
 TIMEDELTA = timedelta(days=3)
-SALTVALUE = '5sdf5a1f5'
+SALTVALUE = '9a15ae9f'

@@ -2,8 +2,6 @@
 {% load static %}
 
 
-
-
 {#<meta name="Keywords" content="">#}
 {#<meta name="Description" content="">#}
 {#<title>用户中心_味多美官网_蛋糕订购，100%使用天然奶油</title>#}
@@ -15,167 +13,181 @@
 
 
 {% block content %}
-	<div class="pagemain">
-		
-		<div class="bgimg">
-			<div class="pc_login">
-	<ul class="nw_tabs">
-		<li onclick="change(&#39;u&#39;)"><input type="radio" id="cm" checked="true" name="type"><label for="cm">普通会员登录</label></li>
-		<li onclick="change(&#39;p&#39;)"><input type="radio" id="pb" name="type"><label for="pb">手机动态码登录</label></li>
-	</ul>
+    <div class="pagemain">
 
-	<form id="formLogin" class="captcha_box" name="formLogin" action="{% url 'users:login' %}" method="post">
-    {% csrf_token %}
-			<div id="box_bd_yzm">
-		<p>请输入以下验证码</p>
-		<div><input id="cp" type="text" style="float:left" placeholder="验证码"><img id="code" src="{% static 'php/captcha.php' %}" title="点击验证码，换一张。" onclick="this.src=&#39;captcha.php?sms_login=1&amp;&#39;+Math.random()"></div>
-		<a id="check_captcha" class="code_but" onclick="sendSms()" href="http://www.wdmcake.cn/user.php?act=login#">确认</a></div>
-	 	<ul id="use_ucode" class="form_list">
-		<input type="hidden" name="act" value="act_login">
-		<input type="hidden" name="back_act" id="back_act" value="http://www.wdmcake.cn/category-2.html?ad_id=58&amp;from=BDQYMP1">
-		<li><input type="text" name="username" id="username" value="" placeholder="用户名/手机/邮箱"></li>
-		<li><input id="password" type="password" name="password" value="" placeholder="输入密码"></li>
-				<li class="m_form_ctrl"><a href="http://www.wdmcake.cn/user.php?act=get_password" target="_blank">忘记密码？</a><input type="checkbox" id="saveme" checked="true"><label for="saveme"> 7天内自动登录</label></li>
-		<li style="height: auto;"><input type="submit" name="" value="登录"></li>
-		<li><a class="across" href="http://www.wdmcake.cn/user.php?act=register&amp;back_act=http://www.wdmcake.cn/category-2.html?ad_id=58&amp;from=BDQYMP1">没有帐号？立即注册</a></li>
-	</ul>
-	
-	<ul id="use_pcode" style="display: none;" class="form_list">
-		<li><input type="text" name="mobile_phone" id="mobile_phone" value="" placeholder="请输入您的手机号"></li>
-		<li class="two_col"><input type="text" name="mCode" placeholder="请输入短信验证码"><input id="get_phoneyzm" type="button" value="获取短信验证码"></li>
-				<li style="height: auto;"><input type="submit" name="" value="登录"></li>
-		<li style="height:20px"></li>
-	</ul>
-	</form>
-	<p class="regtips">
-		温馨提示：<br>
-		成功注册会员，登录后首次完善个人信息，即可获赠官网会员20积分
-	</p>
-</div>
-<script type="text/javascript" language="javascript">
-$(document).ready(function() {
-	//显示图片验证码
-	$("#get_phoneyzm").click(function(){
-		$("#box_bd_yzm").css('display','block');
-		$("#code").attr('src','captcha.php?sms_login=1&' + Math.random());
-	});
-});
-$('#formLogin').submit(function(){
-	var user_name = $("#username").val();
-	var password = $("#password").val();
-	var mobile_phone = $("#mobile_phone").val();
-	var cm_login = $("#cm").prop("checked");
+        <div class="bgimg">
+            <div class="pc_login">
+                <ul class="nw_tabs">
+{#   ======================  普通会员登录或者手机动态登录  ============================    #}
+                    <li onclick="change(&#39;u&#39;)">
+                        <input type="radio" id="cm" checked="true" name="type">
+                        <label for="cm">普通会员登录</label>
+                    </li>
 
-	if(cm_login == true && user_name =="" && password == '')
-	{
-		jAlert("登录信息请填写完整");
-	   return false;	
-	}else if(cm_login != true && mobile_phone == ''){
-		jAlert("请填写手机号");
-		return false;	
-	}
-	$(this).ajaxSubmit({
-		type:"post",
-		url:'user.php?is_ajax=1',
-		//data:"password="+password+"&username="+user_name,
-		dataType:'json',
-		success:user_login_success,
-     });
-			
-   	return false;
-});
-	
-var p="u";
-function change(id) {
-	$("input[type='text']").val('');
-	$("input[type='password']").val('');
-	$("#box_bd_yzm").hide();
-	document.getElementById('use_'+p+'code').style.display="none";
-	document.getElementById('use_'+id+'code').style.display="block";
-	p = id;
-}
+                    <li onclick="change(&#39;p&#39;)">
+                        <input type="radio" id="pb" name="type">
+                        <label for="pb">手机动态码登录</label>
+                    </li>
+                </ul>
 
+                <form id="formLogin" class="captcha_box" name="formLogin" action="{% url 'users:login' %}" method="post">
+                    {% csrf_token %}
+                    <div id="box_bd_yzm">
+                        <p>请输入以下验证码</p>
+                        <div><input id="cp" type="text" style="float:left" placeholder="验证码">
+                            <img id="code"
+                                 src="{% static 'captcha.php' %}"
+                                 title="点击验证码，换一张。"
+                                 onclick="this.src=&#39;captcha.php?sms_login=1&amp;&#39;+Math.random()">
+                        </div>
+                        <a id="check_captcha" class="code_but" onclick="sendSms()"
+                           href="http://www.wdmcake.cn/user.php?act=login#">确认</a></div>
 
-//手机动态码登录
-function sendSms(){
-	var mobile = $("#mobile_phone").val();
-	var pic_code = $("#cp").val();
-		if(verifymobile(mobile) == false){
-			alert('请填写正确的手机号码')
-			return false
-		}
-		$.ajax({
-			type:"post",
-			url:"user.php?act=MobileVerif",
-			data:"mobile="+mobile+"&type=5&pic_code="+pic_code,
-			dataType:"json",
-			success:function(data){
-				if(data.error == 0){
-					$("#MobileCode").show();
-					$("#mlog").removeAttr("disabled")
-					$("#mlog").removeClass('hui');
-					$("#get_phoneyzm").attr("disabled","false");
-					//倒计时60秒
-					 var wait = 60;
-					 $("#get_phoneyzm").val((--wait) + "秒后重新发送");
-					 var time_line = setInterval(function(){
-						 if(wait == 0)
-						 {
-							 $("#get_phoneyzm").removeAttr("disabled");
-							 $("#get_phoneyzm").val("获取手机验证码");
-							 return clearInterval(time_line);
-						 }
-						 else
-						 {
-							 $("#get_phoneyzm").val((--wait) + "秒后重新发送");
-						 }		
-						 },1000);
-						 $("#box_bd_yzm").css('display','none');
-				}else{
-					alert(data.msg);
-					$("#MobileCode").hide();
-				}
-			}
-		})
-}
-//手机号验证
-function verifymobile(mobile){
-	var phone = /^13[0-9]{1}[0-9]{8}$|15[0-9]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$|17[0-9]{9}$/;
-		if(!phone.test(mobile)){
-			return false
-		}
-}
-</script>		</div>
+{#   ======================  普通会员登录   ======================  #}
+                    <ul id="use_ucode" class="form_list">
+                        <input type="hidden" name="act" value="act_login">
+                        <input type="hidden" name="back_act" id="back_act" value="http://www.wdmcake.cn/category-2.html?ad_id=58&amp;from=BDQYMP1">
 
-	</div>
-<script type="text/javascript" src="{% static 'js/jquery.form.js' %}"></script>
-<script type="text/javascript" language="javascript">
+                        <li><input type="text" name="username" id="username" value="" placeholder="用户名/手机/邮箱"></li>
+                        <li><input id="password" type="password" name="password" value="" placeholder="输入密码"></li>
+                        <li class="m_form_ctrl">
+                            <a href="http://www.wdmcake.cn/user.php?act=get_password" target="_blank">忘记密码？</a>
+                            <input type="checkbox" id="saveme" checked="true"><label for="saveme">7天内自动登录</label>
+                        </li>
+                        <li style="height: auto;"><input type="submit" name="" value="登录"></li>
+                        <li><a class="across"
+                               href="http://www.wdmcake.cn/user.php?act=register&amp;back_act=http://www.wdmcake.cn/category-2.html?ad_id=58&amp;from=BDQYMP1">没有帐号？立即注册</a>
+                        </li>
+                    </ul>
+{#   ======================  手机动态登录   ======================  #}
+                    <ul id="use_pcode" style="display: none;" class="form_list">
+                        <li><input type="text" name="mobile_phone" id="mobile_phone" value="" placeholder="请输入您的手机号"></li>
+                        <li class="two_col">
+                            <input type="text" name="mCode" placeholder="请输入短信验证码"><input id="get_phoneyzm" type="button" value="获取短信验证码">
+                        </li>
+                        <li style="height: auto;"><input type="submit" name="" value="登录"></li>
+                        <li style="height:20px"></li>
+                    </ul>
+                </form>
+                <p class="regtips">
+                    温馨提示：<br>
+                    成功注册会员，登录后首次完善个人信息，即可获赠官网会员20积分
+                </p>
+            </div>
+            <script type="text/javascript" language="javascript">
+                $(document).ready(function () {
+                    //显示图片验证码
+                    $("#get_phoneyzm").click(function () {
+                        $("#box_bd_yzm").css('display', 'block');
+                        $("#code").attr('src', 'captcha.php?sms_login=1&' + Math.random());
+                    });
+                });
+                $('#formLogin').submit(function () {
+                    var user_name = $("#username").val();
+                    var password = $("#password").val();
+                    var mobile_phone = $("#mobile_phone").val();
+                    var cm_login = $("#cm").prop("checked");
 
-function user_login_success(res){
-	if(res.error > 0)
-	{
-		jAlert(res.msg,"登录失败");   
-	}
-	else
-	{
-		//jAlert(res.msg, "登录成功",function(){
-			if(res.back_act)
-			{
-			  location.href =res.back_act;  
-			}
-			else
-			{
-			location.href ='user.php';
-			}
-		
-		//});	
-	}
-}
-    
- </script>
+                    if (cm_login == true && user_name == "" && password == '') {
+                        jAlert("登录信息请填写完整");
+                        return false;
+                    } else if (cm_login != true && mobile_phone == '') {
+                        jAlert("请填写手机号");
+                        return false;
+                    }
+                    $(this).ajaxSubmit({
+                        type: "post",
+                        url: 'user.php?is_ajax=1',
+                        //data:"password="+password+"&username="+user_name,
+                        dataType: 'json',
+                        success: user_login_success,
+                    });
+
+                    return false;
+                });
+
+                var p = "u";
+
+                function change(id) {
+                    $("input[type='text']").val('');
+                    $("input[type='password']").val('');
+                    $("#box_bd_yzm").hide();
+                    document.getElementById('use_' + p + 'code').style.display = "none";
+                    document.getElementById('use_' + id + 'code').style.display = "block";
+                    p = id;
+                }
 
 
- 
+                //手机动态码登录
+                function sendSms() {
+                    var mobile = $("#mobile_phone").val();
+                    var pic_code = $("#cp").val();
+                    if (verifymobile(mobile) == false) {
+                        alert('请填写正确的手机号码')
+                        return false
+                    }
+                    $.ajax({
+                        type: "post",
+                        url: "user.php?act=MobileVerif",
+                        data: "mobile=" + mobile + "&type=5&pic_code=" + pic_code,
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.error == 0) {
+                                $("#MobileCode").show();
+                                $("#mlog").removeAttr("disabled")
+                                $("#mlog").removeClass('hui');
+                                $("#get_phoneyzm").attr("disabled", "false");
+                                //倒计时60秒
+                                var wait = 60;
+                                $("#get_phoneyzm").val((--wait) + "秒后重新发送");
+                                var time_line = setInterval(function () {
+                                    if (wait == 0) {
+                                        $("#get_phoneyzm").removeAttr("disabled");
+                                        $("#get_phoneyzm").val("获取手机验证码");
+                                        return clearInterval(time_line);
+                                    } else {
+                                        $("#get_phoneyzm").val((--wait) + "秒后重新发送");
+                                    }
+                                }, 1000);
+                                $("#box_bd_yzm").css('display', 'none');
+                            } else {
+                                alert(data.msg);
+                                $("#MobileCode").hide();
+                            }
+                        }
+                    })
+                }
+
+                //手机号验证
+                function verifymobile(mobile) {
+                    var phone = /^13[0-9]{1}[0-9]{8}$|15[0-9]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$|17[0-9]{9}$/;
+                    if (!phone.test(mobile)) {
+                        return false
+                    }
+                }
+            </script>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="{% static 'js/jquery.form.js' %}"></script>
+    <script type="text/javascript" language="javascript">
+
+        function user_login_success(res) {
+            if (res.error > 0) {
+                jAlert(res.msg, "登录失败");
+            } else {
+                //jAlert(res.msg, "登录成功",function(){
+                if (res.back_act) {
+                    location.href = res.back_act;
+                } else {
+                    location.href = 'user.php';
+                }
+
+                //});
+            }
+        }
+
+    </script>
 
 
 

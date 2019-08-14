@@ -1,35 +1,43 @@
 from django.shortcuts import render
 
 # Create your views here.
-def base(request):
-    #获取sesson
-    return render(request,'base1.html')
-
-
 def index(request):
-
-    return render(request, 'index.html')
+    username = request.COOKIES.get('username')
+    return render(request,'index.html',context={'username':username})
 
 
 def nav_br1(request):
-    return render(request,'nav_br1.html')
+    username = request.COOKIES.get('username')
+    return render(request,'nav_br1.html',context={'username':username})
 
 
 def nav_br2(request):
-    return render(request,'nav_br2.html')
+    username = request.COOKIES.get('username')
+    return render(request,'nav_br2.html',context={'username':username})
+
 
 def nav_br3(request):
-    return render(request,'nav_br3.html')
+    username = request.COOKIES.get('username')
+    return render(request,'nav_br3.html',context={'username':username})
+
 
 def nav_br4(request):
-    return render(request,'nav_br4.html')
+    username = request.COOKIES.get('username')
+    return render(request,'nav_br4.html',context={'username':username})
 
 
 def nav_br5(request):
-    return render(request,'nav_br5.html')
+    username = request.COOKIES.get('username')
+    return render(request,'nav_br'+'5'+'.html',context={'username':username})
+
 
 def nav_br6(request):
-    return render(request,'nav_br6.html')
+    username = request.COOKIES.get('username')
+    return render(request,'nav_br6.html',context={'username':username})
+
 
 def nav_br7(request):
-    return render(request,'nav_br7.html')
+    username = request.COOKIES.get('username')
+    return render(request,'nav_br7.html',context={'username':username})
+
+

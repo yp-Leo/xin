@@ -186,45 +186,49 @@ $("#city_sel_div a").click(function(){
     <div class="navigation">
         <ul>
                         <li>
-            	<a href="http://www.wdmcake.cn/">首页</a>
+            	<a href="{% url 'App:index' %}">首页</a>
             </li>
         	            <li class="navlicake">
-            	<a href="http://www.wdmcake.cn/category-1.html">蛋糕</a>
+            	<a href="{% url 'App:nav_br1' %}">蛋糕</a>
             </li>
         	            <li>
-            	<a href="http://www.wdmcake.cn/category-11.html">电子卡券</a>
+            	<a href="{% url 'App:nav_br1' %}">电子卡券</a>
             </li>
         	            <li>
-            	<a href="http://www.wdmcake.cn/category-10.html" style="color:red; font-weight:bold;">法式月饼</a>
+            	<a href="{% url 'App:nav_br2' %}" style="color:red; font-weight:bold;">法式月饼</a>
             </li>
         	            <li>
-            	<a href="http://www.wdmcake.cn/category-30.html" target="_blank">全国邮寄</a>
+            	<a href="{% url 'App:nav_br3' %}" target="_blank">全国邮寄</a>
             </li>
         	            <li>
-            	<a href="http://www.wdmcake.cn/article.php?id=103" target="_blank">同城配送范围</a>
+            	<a href="{% url 'App:nav_br4' %}" target="_blank">同城配送范围</a>
             </li>
         	            <li>
-            	<a href="http://www.wdmcake.cn/user.php">会员中心</a>
+            	<a href="{% url 'App:nav_br5' %}">会员中心</a>
             </li>
         	            <li>
-            	<a href="https://m.bigaka.com/jfmall/toJFMallPage.do?storeid=18736" target="_blank">积分换礼</a>
+            	<a href="{% url 'App:nav_br6' %}" target="_blank">积分换礼</a>
             </li>
         	            <li class="li2">
-            	<a href="http://www.wdmcake.cn/about.php?id=53">企业服务</a>
+            	<a href="{% url 'App:nav_br7' %}">企业服务</a>
             </li>
         	        </ul>
     </div>
     <div class="top_right">
         <span>订购热线   110/119/120</span>
         <div class="login">
-    <ul>
-        <li class="li1"><a href="http://www.wdmcake.cn/user.php?act=register">注册</a></li>
-        <li><a href="http://www.wdmcake.cn/user.php?act=login">登录</a></li>
-    </ul>
-{#    <ul>#}
-{#        <li><a href="http://www.wdmcake.cn/user.php?act=logout">退出</a></li>#}
-{#        <li><a href="http://www.wdmcake.cn/user.php">欢迎您，178642...</a></li>#}
-{#    </ul>        #}
+    {% if 'username' in request.session %}
+        <ul>
+            <li><a href="{% url 'users:logout' %}">退出</a></li>
+            <li><a href="http://www.wdmcake.cn/user.php">欢迎您:&nbsp{{ request.session.username }}</a></li>
+        </ul>
+    {% else %}
+        <ul>
+            <li class="li1"><a href="{% url 'users:register' %}">注册</a></li>
+            <li><a href="{% url 'users:login' %}">登录</a></li>
+        </ul>
+    {% endif %}
+
     <div class="link">
         <ul>
             <li class="cart"><a href="http://www.wdmcake.cn/flow.php">&nbsp;</a></li>

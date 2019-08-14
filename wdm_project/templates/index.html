@@ -3,11 +3,11 @@
 
 {# ================== 页面content =============== #}
 {% block content %}
-
+    
     <div class="contentall">
     <div class="IndexContentBox">
     <div class="IndexContentMain" style="width:1170px; overflow:hidden;">
-
+    
     <div class="lunbo_img">
                 <div class="indexBanner">
                 <div id="slides" class="slides">
@@ -28,7 +28,7 @@
                                     <a target="_blank" href="http://www.wdmcake.cn/topic-727.html">
                                     <img src="{% static 'images/1562718751695814222.jpg' %}" width="1000" height="490">
                                     </a></li>
-
+    
                     </ul>
                     <div class="btnList" id="btnList">
                         <div class="BtnimgList" style="bottom: -510.479px;">
@@ -46,15 +46,15 @@
                     <div class="BtnNumWrap" style="bottom: -487.521px;"><a href="javascript:void(0);" class="cur">1</a><a href="javascript:void(0);">2</a><a href="javascript:void(0);">3</a><a href="javascript:void(0);">4</a></div></div>
                 </div>
                 <div class="pagingArrowWrap prev" style="left:-70px;top:198px"><a class="arrow" data-dir="prev"></a></div><div class="pagingArrowWrap next" style="right:-70px;top:198px"><a class="arrow" data-dir="next"></a></div></div>
-
+    
             </div>
-
+    
     </div>
-
-
+    
+    
     </div>
-
-
+    
+    
     </div>
     <script>
     window.Plugin = window.Plugin || {};
@@ -140,7 +140,7 @@
                     var n = a(this),
                         o;
                     if (n.siblings("img").length > 0) {
-                        o = n.base1() + 1
+                        o = n.index() + 1
                     } else {
                         o = n.parent().index() + 1
                     }
@@ -204,7 +204,7 @@
             }
         };
         c.slideTo = function(m, n) {
-
+    
             var p = this,
                 o = p.bannerWidth * (m - 1);
             p.imgContainer.stop();
@@ -304,7 +304,7 @@
         };
         a.fn.bannerSlider.defaults = a.extend(true, {}, b)
     })(jQuery, Plugin.BannerSlider = Plugin.BannerSlider || {}, window);
-
+    
     var maxShowedBanner = 1, currentBanner = 1,
             maxBannerNum = 7, wdmslides = $(".indexBanner"),
             bsObj, bannerShelf, replaceStart = false, replaced = false;
@@ -326,7 +326,7 @@
     bsObj = wdmslides.data("bannerSlider");
     });
     </script>
-
+    
     {#================== 首页滚动字幕 ==================#}
     <p class="microsoft marquee">
                     成老师到店优惠:
@@ -334,9 +334,9 @@
         尊敬的成老师：只要您不给我们留级，所有5毛钱以下产品随便吃。
         2019.08.10
     </p>
-
+        
     <div class="content">
-
+    
             <div class="five_goods">
                         <a target="_blank" href="http://www.wdmcake.cn/product-24.html?ad_id=290&amp;from=wdm">
                     <div class="new_goods top-maskItem">

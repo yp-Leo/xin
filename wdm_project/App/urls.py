@@ -3,8 +3,8 @@ from django.conf.urls import url
 from App import views
 
 urlpatterns = [
-    url(r'^base/$',views.base,name='base'),
     url(r'^index/$',views.index,name='index'),
+    # url(r'^base/$',views.base,name='base'),
     url(r'^nav_br1/$',views.nav_br1,name='nav_br1'),
     url(r'^nav_br2/$',views.nav_br2,name='nav_br2'),
     url(r'^nav_br3/$',views.nav_br3,name='nav_br3'),

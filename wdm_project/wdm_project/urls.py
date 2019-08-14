@@ -21,4 +21,3 @@ urlpatterns = [
     url(r'^App/',include('App.urls',namespace="App")),
     url(r'^users/',include('users.urls',namespace="users")),
 ]
-
