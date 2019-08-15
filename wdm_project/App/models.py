@@ -12,7 +12,7 @@ class User(models.Model):
     password_hash = models.CharField(max_length=128, db_column='password')           # 用户密码
     sex = models.IntegerField(blank=True, null=True, verbose_name='性别')             # 用户性别
     realname = models.CharField(max_length=60, null=True)                            # 用户真实姓名
-    tel = models.IntegerField(max_length=11)                                         # 手机号
+    tel = models.IntegerField(max_length=11,null=True)                               # 手机号
     email = models.EmailField(null=True)                                             # 邮箱
     birthday = models.DateTimeField(null=True)                                       # 生日
     qq = models.IntegerField(null=True)                                              # qq号
@@ -24,13 +24,14 @@ class User(models.Model):
 
     @password.setter
     def password(self, value):
-        # self.password_hash = hashlib.sha1(value.encode('utf8')).hexdigest()
-        self.password_hash = make_password(value)
+        self.password_hash = hashlib.sha1(value.encode('utf8')).hexdigest()
+        # self.password_hash = make_password(value)
 
     def check_pw(self,value):
         #第一参数是未加密的原文
         #第二个参数是加密后的秘文
-        return check_password(value,self.password_hash)
+        # return check_password(value,self.password_hash)
+        return value == self.password_hash
 
     @classmethod
     def check_login1(cls,username,password):
@@ -44,7 +45,7 @@ class User(models.Model):
         #     return False
         # return True
         # return user and check_password(password,user.password_hash)
-        return user
+        return user and cls.check_pw(user,password)
 
     @classmethod
     def check_login2(cls, username, password):
@@ -57,7 +58,15 @@ class User(models.Model):
         # if not check_password(password,user.password_hash):
         #     return False
         # return True
-        return user and check_password(password, user.password_hash)
+        # return user and check_password(password, user.password_hash)
+        return user and cls.check_pw(user,password)
+
+    # 判断注册的用户是否存在
+    @classmethod
+    def isexist(cls,username):
+        # 按用户名查询
+        user = cls.objects.filter(username=username).first()
+        return not user
 
     @property
     def gender(self):

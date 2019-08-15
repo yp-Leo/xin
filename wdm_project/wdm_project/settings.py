@@ -90,7 +90,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         # 'NAME': 'wdm_project',
-        'NAME': 'wdm_test',
+        'NAME': 'wdm_test02',
         'HOST':'127.0.0.1',
         'USER':'root',
         'PASSWORD':'170526',
